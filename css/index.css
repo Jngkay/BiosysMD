@@ -1,0 +1,73 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+.row{
+	margin-top: 100px;
+}
+#logo_biosys{
+	width: 100%;
+	padding-top: 150px;
+	padding-left: 20px;
+	
+	
+}
+.col-sm-4{
+	border-right: 2px #57B471 solid;
+}
+.right{
+	display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+	font-family: 'Arya', sans-serif;
+}
+.left{
+	display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+	font-family: 'Arya', sans-serif;
+	padding-top: 170px;
+	padding-bottom: 220px;
+}
+
+#Biosys_name{
+	font-size: 40px;
+	margin-bottom: 0;
+}
+#tagline{
+	font-size: 20px !important;
+	margin-top:0;
+}
+
+#Welcome{
+	font-size: 70px;
+	margin-bottom: 0;
+}
+#instruction{
+	font-size: 15px !important;
+	margin-top: 0;
+	margin-bottom: 80px;
+}
+.field{
+	width: 250px;
+  height: 40px;
+  margin-bottom: 15px;
+  background: #E5E5E5;
+  border: none;
+  border-radius: 3px;
+}
+#login_btn
+{
+	margin-top:20px;
+	width: 200px;
+  height: 40px;
+	font-size:20px;
+	background: #57B471;
+	color:white;
+}

@@ -1,0 +1,120 @@
+#logo_biosys {
+	width: 30%;
+}
+#accordionExample {
+	width:15%;
+}
+.logo {
+	display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  font-family: 'Arya', sans-serif;
+  align-content: flex-start;
+  flex-direction: row-reverse;
+}
+.wrapper {
+  display: flex;
+  align-items: stretch;
+	position: absolute;
+}
+
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+	min-height: 100vh;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+p {
+  font-family: 'Arya', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+	
+}
+
+#sidebar {
+    /* don't forget to add all the previously mentioned styles here too */
+  background: #ffffff;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  color: #4B4444;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+  font-family: 'Arya', sans-serif;
+  align-content: space-between;
+  flex-direction: row;
+}
+
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #387649;
+}
+
+#sidebar ul p {
+    color: #4B4444;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+	padding: 10px;
+  font-size: 1.3em;
+  display: block;
+  padding-left: 30px;
+  font-family: 'Arya', sans-serif;
+}
+#sidebar ul li a:hover {
+    color: #ffffff;
+    background: #57B471;
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #4B4444;
+}
+
+#label{
+	color:#4B4444;
+	text-decoration: none;
+	font-size:50px;
+}
+#Biosys_name {
+	font-family:'Arya', sans-serif;
+	font-size: 0.8em;
+	margin-left:10px;
+	font-weight: bold;
+}
+#tagline {
+  font-size: 0.6em;
+	font-weight: normal;
+}

@@ -1,0 +1,39 @@
+table{
+	background:white;
+	border-color:black;
+	font-family: 'Arya', sans-serif;
+}
+thead{
+	background:#57B471;
+	color:white;
+}
+.dataTables_wrapper{
+	width:80%;
+	margin-top:5px;
+	margin-left: 263px;
+	float:left;
+	background-color: white;
+	padding:10px;
+	background:white;
+	box-shadow: 0px 3px 7px -1px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 3px 7px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 7px -1px rgba(0,0,0,0.75);
+}
+.update{
+	background-color:#3C75B8;
+	color:white;
+	margin-right: 5px;
+}
+.delete{
+	background-color:#C03750;
+	color:white;
+}
+.action{
+	border:none;
+	border-radius: 5px;
+  	padding:5px;
+}
+.dataTables_filter
+{
+	margin-bottom:10px;
+}
