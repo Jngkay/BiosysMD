@@ -1,26 +1,31 @@
 
-// Get the modal
-var modal = document.getElementById("myModal");
+$(".update").click(function(){
+  $("#updateModal").show();
+  var desc = $(this).data("desc");
+  var qty = $(this).data("qty");
+  var unit = $(this).data("unit");
+  var unitprice = $(this).data("uprice");
+  var expiry = $(this).data("expiry");
+  var prodId = $(this).data("id");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+  $("#proddesc").val(desc);
+  $("#prodqty").val(qty);
+  $("#produnit").val(unit);
+  $("#prodUprice").val(unitprice);
+  $("#expiry").val(expiry);
+  $("#ProdId").val(prodId);
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+});
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+$(".close").click(function(){
+  $("#updateModal").hide();
+});
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+$("#myBtn").click(function(){
+  $("#myModal").show();
+});
+
+$(".close").click(function(){
+  $("#myModal").hide();
+});

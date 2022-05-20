@@ -5,36 +5,8 @@
 	<body>
 		<div class="label productList">Product List
 			<button id="myBtn">Add</button>
-			<!-- The Modal -->
-				<div id="myModal" class="modal">
-					<!-- Modal content -->
-					<div class="modal-content">
-						<form action="../actions/product_add.php" method="POST">
-							<div class="header">
-							<h3 id="Title">Create Product</h3>
-							<span class="close">&times;</span>
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" name="productdesc"placeholder="Product Description">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control"  name="productqty"placeholder="Product Quantity">
-							</div>
-							<div class="form-group">	
-								<input type="text" class="form-control" name="productunit" placeholder="Product Unit">
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" name="unitprice"placeholder="Product Unit Price">
-							</div>
-							<div class="form-group">
-								<input type="date" class="form-control" name="expiry" placeholder="Product Expiration Date">
-							</div>
-							<div class="form-group">
-								<button type="submit" name="submit"class="btn btn-primary">Add</button>
-							</div>
-						</form>
-					</div>
-				</div>
+				<!-- The Modal -->
+				<?php include('../include/modal_Product.php');?>
 		</div>
 		<table id="product_list" class="display">
 			<thead>
@@ -63,7 +35,14 @@
 								<td><?php echo $row["ProdUnit"]; ?></td>	
 								<td><?php echo $row["ProdUnitPrice"]; ?></td>	
 								<td><?php echo $row["ProdExpiry"]; ?></td>	
-								<td><button class="action update">Update</button>
+								<td><button class="action update" 
+								data-id="<?php echo $row["ProdId"]; ?>"
+								data-desc="<?php echo $row["ProdDescription"]; ?>"
+								data-qty="<?php echo $row["ProdQuantity"]; ?>"
+								data-unit="<?php echo $row["ProdUnit"]; ?>"
+								data-uprice="<?php echo $row["ProdUnitPrice"]; ?>"
+								data-expiry="<?php echo $row["ProdExpiry"]; ?>"
+								>Update</button>
 								<a href="../actions/product_delete.php?pid=<?php echo $row["ProdId"];?>" class="action delete">Delete</td>	
 							</tr>
 						<?php endwhile; ?>

@@ -17,10 +17,5 @@ if(isset($_POST{'submit'})){
     else{
         die("Connection failed: " . $conn->connect_error);
     }
-
-
 }
-
-
-
 ?> 

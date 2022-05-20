@@ -5,27 +5,9 @@
 	<link href="../css/ViewOrder.css" rel="stylesheet" type="text/css" />
 	<body>
 		<div class="label SupplierList">Supplier List
-		<button id="myBtn">Add</button>
-		<div id="myModal" class="modal">
-				<!-- Modal content -->
-				<div class="modal-content">
-					<form>
-						<div class="header">
-							<h3 id="Title">Create Supplier</h3>
-							<span class="close">&times;</span>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Supplier Name">
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control"  placeholder="Supplier Address">
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-primary">Add</button>
-						</div>
-					</form>
-				</div>
-			</div>
+			<button id="myBtn">Add</button>
+				<!-- The Modal -->
+				<?php include('../include/modal_Supplier.php'); ?>
 		</div>
 		<table id="supplier_list" class="display">
 			<thead>

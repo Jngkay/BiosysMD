@@ -3,8 +3,6 @@
 	<?php include('../include/navbar.php');?>
 	<link href="../css/viewPage.css" rel="stylesheet" type="text/css" />	
 	<body>
-		<div></div>
-		
 		<div class="card-group">
 			
 		  <div class="card">
