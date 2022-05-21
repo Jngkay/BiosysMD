@@ -28,7 +28,6 @@
 				</div>
 			</div>
 		</div>
-	<a href="../php/dashboard.php">click here</a>
 </body>
 </html>
 
