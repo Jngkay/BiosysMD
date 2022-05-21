@@ -3,7 +3,11 @@
 	<?php include('../include/navbar.php');?>
 	<?php include("../database/db.php");?>
 <body>
-	<div class="label clientOrder">List of Client Orders</div>
+	<div class="label clientOrder">List of Client Orders
+	<button id="myBtn">Add</button>
+	<?php include('../include/modal_orderClient.php');?>
+	</div>
+	
 		<table id="clientOrder_list" class="display">
 			<thead>
 				<tr>
@@ -26,8 +30,9 @@
 								<td><?php echo $row["ClientOrderNo"]; ?></td>
 								<td><?php echo $row["ClientName"]; ?></td>	
 								<td><?php echo $row["OrderItem"]; ?></td>	
-								<td><?php echo $row["Status"]; ?></td>	
-								<td><button class="action update">Update</button>
+								<td><?php echo $row["Status"]; ?></td>
+								<td><button class="action receipt">Receipt</button>
+								<button class="action update">Update</button>
 								<a class="action delete">Delete</td>	
 							</tr>
 						<?php endwhile; ?>
@@ -44,5 +49,6 @@
     $('#clientOrder_list').DataTable();
 } );
 		</script>
+		<script src="../include/modalscript_orderClient.js"></script>
 	
 </html>

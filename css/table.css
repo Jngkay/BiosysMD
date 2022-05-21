@@ -6,6 +6,7 @@ table{
 thead{
 	background:#57B471;
 	color:white;
+
 }
 .dataTables_wrapper{
 	width:80%;
@@ -28,6 +29,11 @@ thead{
 	background-color:#C03750;
 	color:white;
 }
+.receipt{
+	background-color: #57B471;
+	color: white;
+	margin-right: 5px;
+}
 .action{
 	border:none;
 	border-radius: 5px;
@@ -37,3 +43,4 @@ thead{
 {
 	margin-bottom:10px;
 }
+
