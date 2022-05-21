@@ -34,4 +34,5 @@ $(".close").click(function(){
 
 $(".close").click(function(){
     $("#addClientOrder").hide();
+    $("#items-add").empty();
 });

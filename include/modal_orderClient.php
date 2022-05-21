@@ -6,7 +6,7 @@
 				<span class="close">&times;</span>
 			</div>
 			<div class="form-group">
-			    <input type="text" name="" id="numorder"class="form-control" placeholder="Number of Order items">
+			    <input type="number" name="" id="numorder"class="form-control" placeholder="Number of Order items">
 			</div>
             <div class="form-group">
 			    <button  type="submit" class="action next" id="next">Next</button>
