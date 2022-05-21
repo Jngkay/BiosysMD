@@ -32,8 +32,8 @@
 								<td><?php echo $row["OrderItem"]; ?></td>	
 								<td><?php echo $row["Status"]; ?></td>
 								<td><button class="action receipt">Receipt</button>
-								<button class="action update">Update</button>
-								<a class="action delete">Delete</td>	
+								<button class = "action update">Update</button>
+								<a class = "action delete">Delete</td>	
 							</tr>
 						<?php endwhile; ?>
 					<?php endif; ?>
