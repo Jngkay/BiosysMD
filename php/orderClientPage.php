@@ -15,7 +15,6 @@
 				</tr>
 			</thead>
 			<tbody>
-			<tbody>
 					<?php
 						$sql = "SELECT * FROM clientorder"; //get all products
 						$result = $conn->query($sql);
