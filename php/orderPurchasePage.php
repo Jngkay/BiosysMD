@@ -10,7 +10,6 @@
 					<th>Supplier Name</th>
 					<th>Order List</th>
 					<th>Status</th>
-					<th>Total Amount</th>	
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -20,40 +19,11 @@
 					<td>Bioline Medical System</td>	
 					<td>Solution Pack Expand</td>	
 					<td>Complete</td>	
-					<td>104,000.00</td>	
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0002</td>
-					<td>JMB Medical Trading</td>	
-					<td>LightWeight WheelChair</td>	
-					<td>Complete</td>	
-					<td>50,000.00</td>	
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0003</td>
-					<td>Labsolution Technologies Inc.</td>	
-					<td>HBA1C IChroma</td>	
-					<td>Complete</td>	
-					<td>5,000.00</td>	
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0004</td>
-					<td>Bioline Medical System</td>	
-					<td>Urine Strips 4SG</td>	
-					<td>Complete</td>	
-					<td>90,400.00</td>		
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0005</td>
-					<td>Sterilab Co.</td>	
-					<td>Specimen Colection Cup</td>	
-					<td>Complete</td>	
-					<td>2,400.00</td>		
-					<td><button class="action delete">Delete</button></td>	
+					<td>
+						<button class="action update">Update</button>
+						<button class="action delete">Delete</button>
+						<button class="action" style="background: #57B471; color: white">Receipt</button>
+					</td>	
 				</tr>
 			</tbody>
 		</table>
