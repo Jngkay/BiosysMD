@@ -37,18 +37,16 @@
 							</tr>
 						<?php endwhile; ?>
 					<?php endif; ?>
-
 					<?php
 						$conn->close();
 					?>
 				</tbody>
 		</table>
 </body>
-			<script>
+		<script>
 			$(document).ready( function () {
-    $('#clientOrder_list').DataTable();
-} );
+    			$('#clientOrder_list').DataTable();
+			} );
 		</script>
 		<script src="../include/modalscript_orderClient.js"></script>
-	
 </html>
