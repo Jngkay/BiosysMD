@@ -22,14 +22,22 @@
 					<h3 id="Title">Add Client Order</h3>
 					<span class="close">&times;</span>
 				</div>
-
+				<?php
+					$sqll = "SELECT * FROM clients"; 
+					$resultt = $conn->query($sqll);	
+				?>
 					<div class="form-group">
-						<input type="text" class="form-control" name="clientorderno" placeholder="Client Order No">
+						<input type="text" class="form-control" placeholder="Client Id">
 					</div>
+					<select class="form-select">
+						<?php if ($resultt->num_rows > 0): ?>
+							<?php while($row = $resultt->fetch_assoc()): ?>				
+								<option value="<?php echo $row["ClientId"]?>"> <?php echo $row["ClientName"]?> </option>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</select>
 
-                    <div class="form-group">
-						<input type="text" class="form-control" name="clientName" placeholder="Client Name">
-					</div>
+                    
 
 				    <hr>
                     <!-- Here are the items form generated -->
