@@ -72,6 +72,12 @@
 					};
 				});
 
+				$("#add-submit").click(function(){
+					alert("Test");
+					$("#addPurchaseOrder").hide();
+					$("#items-add").empty();
+				});
+
 				$(".close").click(function(){
 					$("#myModal").hide();
 				});

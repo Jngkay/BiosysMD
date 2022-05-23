@@ -52,7 +52,7 @@
                     <div id="items-add"></div>
 
 					<div class="form-group">
-						<button type="submit" name="submit" class="btn btn-primary next">Add</button>
+						<button type="submit" name="submit" id="add-submit" class="btn btn-primary next">Add</button>
 					</div>
 			<!-- </form> -->
 		</div>
