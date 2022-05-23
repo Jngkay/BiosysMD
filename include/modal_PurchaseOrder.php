@@ -33,9 +33,18 @@
 						<input type="text" class="form-control" name="unitprice" placeholder="Purchase Order ID">
 					</div>
 
-                    <div class="form-group">
-						<input type="text" class="form-control" name="unitprice" placeholder="Suplier Name">
-					</div>
+					<?php
+						$s = "SELECT * FROM supplier"; //get all products
+						$r = $conn->query($s);
+					?>
+
+					<select class="form-select">
+						<?php if ($r->num_rows > 0): ?>
+							<?php while($row = $r->fetch_assoc()): ?>				
+									<option value="<?php echo $row["SupId"]?>"> <?php echo $row["SupName"]?> </option>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</select>
 
 				    <hr>
 
