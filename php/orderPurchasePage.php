@@ -1,6 +1,12 @@
 <html>
-	<?php include('../include/header.php');?>
-	<?php include('../include/navbar.php');?>
+	<?php 
+		include('../include/header.php');
+		include('../include/navbar.php');
+		include('../database/db.php');
+
+		$sql = "SELECT * FROM products"; //get all products
+		$result = $conn->query($sql);
+	?>
 <body>
 	<div class="label clientOrder">
 		List of Purchase Orders
@@ -50,9 +56,14 @@
 					for(var x = 1; x <= $("#numorder").val(); x++){
 						$("#items-add").append(`
 							<h4 id="Title">Item ${x}: </h4>
-							<div class="form-group">
-								<input type="text" class="form-control" name="unitprice" placeholder="Product">
-							</div>
+							
+							<select class="form-select">
+								<?php if ($result->num_rows > 0): ?>
+									<?php while($row = $result->fetch_assoc()): ?>				
+											<option value="<?php echo $row["ProdId"]?>"> <?php echo $row["ProdDescription"]?> </option>
+									<?php endwhile; ?>
+								<?php endif; ?>
+							</select>
 
 							<div class="form-group">
 								<input type="text" class="form-control" name="unitprice" placeholder="Quantity">
