@@ -1,21 +1,28 @@
 <?php include('../database/db.php');
 
 if(isset($_POST{'submit'})){
-    $Clientorderno = $_POST['clientorderno'];
-    $Clientname = $_POST['clientName'];
-    $Itemorder= $_POST['itemorder'];
-    $Qty = $_POST['qty'];
-    $Unitprice = $_POST['unitprice'];
-    
-    $sql = "INSERT INTO `clientorder` (ClientOrderNo, ClientName, OrderItem, ItemQty, ItemPrice) 
-    VALUES ('$Clientorderno', '$Clientname', '$Itemorder', '$Qty', '$Unitprice')";
-    $result = mysqli_query($conn,$sql); 
+   $numorder = $_POST['numorder'];
+   $orderid = rand(10, 9999);
+   $clientid = $_POST['clientId'];
+   $clientname = $_POST['clientName'];
+   $productArray = $_POST['productId'];
+   $orderstatus = $_POST['orderStatus'];
+   $count = 0;
+   foreach($productArray as $parray){
+        $productid = $_POST['productId'][$count];
+        $quantity = $_POST['qty'][$count];
+        $unitprice = $_POST['unitPrice'][$count];
 
-    if($result){
-        header('Location: ../php/orderClientPage.php');
-    }
-    else{
-        die("Connection failed: " . $conn->connect_error);
-    }
+        $sql = "INSERT INTO clientorder (clientorderId, ClientOrderNo, ClientName, OrderItem, ItemQty, ItemPrice, orderStatus) VALUES ('$orderid', '$clientid', '$clientname', '$productid', '$quantity', '$unitprice', '$orderstatus' )";
+       
+        $conn->query($sql);
+        
+        $count++;
+        
+   }
+   header('Location: ../php/orderClientPage.php');
+
+
+
 }
 ?> 

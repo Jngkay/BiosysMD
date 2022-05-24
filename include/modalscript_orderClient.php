@@ -19,7 +19,7 @@
 			for (var x = 1; x <= $("#numorder").val(); x++) {
 				$("#items-add").append(`
 					<h4 id="Title">Item ${x}: </h4>
-					<select class="form-select">
+					<select class="form-select" name="productId[]">
 						<?php if ($res->num_rows > 0): ?>
 							<?php while($row = $res->fetch_assoc()): ?>				
 								<option value="<?php echo $row["ProdId"]?>"> <?php echo $row["ProdDescription"]?> </option>
@@ -27,10 +27,10 @@
 						<?php endif; ?>
 					</select>
 					<div class = "form-group">
-						<input type="text" class="form-control" name="qty" placeholder="Quantity">
+						<input type="text" class="form-control" name="qty[]" placeholder="Quantity">
 					</div>
 					<div class = "form-group">
-						<input type="text" class="form-control" name="unitprice" placeholder="Unit Price">
+						<input type="text" class="form-control" name="unitPrice[]" placeholder="Unit Price">
 					</div>
 				`);
 			};
