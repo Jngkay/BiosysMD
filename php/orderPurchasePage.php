@@ -3,11 +3,18 @@
 		include('../include/header.php');
 		include('../include/navbar.php');
 		include('../database/db.php');
+<<<<<<< HEAD
 		
 		$s = "SELECT * FROM products"; 
 		$res = $conn->query($s);	
 	?>
 
+=======
+
+		$sql = "SELECT * FROM products"; //get all products
+		$result = $conn->query($sql);
+	?>
+>>>>>>> d2300a056f1d11ff0de43de4d996d1d29e41268c
 <body>
 	<div class="label clientOrder">
 		List of Purchase Orders
@@ -46,5 +53,58 @@
 			</tbody>
 		</table>
 </body>
+<<<<<<< HEAD
 	<?php include('../include/modalscript_orderPurchase.php');?>
+=======
+		<script>
+			$(document).ready( function () {
+				$('#purchaseOrder_list').DataTable();
+
+
+				$("#myBtn").click(function(){
+					$("#myModal").show();
+				});
+
+				$(".next").click(function(e){
+					e.preventDefault();
+					$("#myModal").hide();
+					$("#addPurchaseOrder").show();
+					
+					for(var x = 1; x <= $("#numorder").val(); x++){
+						$("#items-add").append(`
+							<h4 id="Title">Item ${x}: </h4>
+							
+							<select class="form-select">
+								<?php if ($result->num_rows > 0): ?>
+									<?php while($row = $result->fetch_assoc()): ?>				
+											<option value="<?php echo $row["ProdId"]?>"> <?php echo $row["ProdDescription"]?> </option>
+									<?php endwhile; ?>
+								<?php endif; ?>
+							</select>
+
+							<div class="form-group">
+								<input type="text" class="form-control" name="unitprice" placeholder="Quantity">
+							</div>
+						`);
+					};
+				});
+
+				$("#add-submit").click(function(){
+					alert("Test");
+					$("#addPurchaseOrder").hide();
+					$("#items-add").empty();
+				});
+
+				$(".close").click(function(){
+					$("#myModal").hide();
+				});
+
+				$(".close").click(function(){
+					$("#addPurchaseOrder").hide();
+					$("#items-add").empty();
+				});
+
+			} );
+		</script>
+>>>>>>> d2300a056f1d11ff0de43de4d996d1d29e41268c
 </html>

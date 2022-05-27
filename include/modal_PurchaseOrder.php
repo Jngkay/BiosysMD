@@ -37,10 +37,22 @@
 						<input type="text" class="form-control" name="purchaseorderno" placeholder="Purchase Order No.">
 					</div>
 
+<<<<<<< HEAD
                     <select class="form-select" name="supplierName">
 						<?php if ($Result->num_rows > 0): ?>
 							<?php while($row = $Result->fetch_assoc()): ?>				
 								<option value="<?php echo $row["SupName"]?>"> <?php echo $row["SupName"]?> </option>
+=======
+					<?php
+						$s = "SELECT * FROM supplier"; //get all products
+						$r = $conn->query($s);
+					?>
+
+					<select class="form-select">
+						<?php if ($r->num_rows > 0): ?>
+							<?php while($row = $r->fetch_assoc()): ?>				
+									<option value="<?php echo $row["SupId"]?>"> <?php echo $row["SupName"]?> </option>
+>>>>>>> d2300a056f1d11ff0de43de4d996d1d29e41268c
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</select>
@@ -50,7 +62,11 @@
                     <!-- Here are the items form generated -->
                     <div id="items-add"></div>
 					<div class="form-group">
+<<<<<<< HEAD
 						<input type="text" class="form-control" name="orderstatus" placeholder="Order Status">
+=======
+						<button type="submit" name="submit" id="add-submit" class="btn btn-primary next">Add</button>
+>>>>>>> d2300a056f1d11ff0de43de4d996d1d29e41268c
 					</div>
 					<div class="form-group">
 						<button type="submit" name="submit" class="btn btn-primary">Create Purchase Order</button>
