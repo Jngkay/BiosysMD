@@ -3,18 +3,11 @@
 		include('../include/header.php');
 		include('../include/navbar.php');
 		include('../database/db.php');
-<<<<<<< HEAD
 		
 		$s = "SELECT * FROM products"; 
 		$res = $conn->query($s);	
 	?>
 
-=======
-
-		$sql = "SELECT * FROM products"; //get all products
-		$result = $conn->query($sql);
-	?>
->>>>>>> d2300a056f1d11ff0de43de4d996d1d29e41268c
 <body>
 	<div class="label clientOrder">
 		List of Purchase Orders
