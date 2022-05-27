@@ -22,32 +22,43 @@
 <div id="addPurchaseOrder" class="modal">
 	<!-- Modal content -->
 		<div class="modal-content">
-			<!-- <form action="#" method="POST"> -->
-
+		<form action="../actions/orderpurchase_add.php" method="POST">
+				<input type="hidden" name="numorder" id="inputnum">
 				<div class="header">
 					<h3 id="Title">Add Purchase Order</h3>
 					<span class="close">&times;</span>
 				</div>
 
+				<?php
+					$Sql = "SELECT * FROM supplier"; 
+					$Result = $conn->query($Sql);	
+				?>
 					<div class="form-group">
-						<input type="text" class="form-control" name="unitprice" placeholder="Purchase Order ID">
+						<input type="text" class="form-control" name="purchaseorderno" placeholder="Purchase Order No.">
 					</div>
 
-                    <div class="form-group">
-						<input type="text" class="form-control" name="unitprice" placeholder="Suplier Name">
-					</div>
+                    <select class="form-select" name="supplierName">
+						<?php if ($Result->num_rows > 0): ?>
+							<?php while($row = $Result->fetch_assoc()): ?>				
+								<option value="<?php echo $row["SupName"]?>"> <?php echo $row["SupName"]?> </option>
+							<?php endwhile; ?>
+						<?php endif; ?>
+					</select>
 
 				    <hr>
 
                     <!-- Here are the items form generated -->
                     <div id="items-add"></div>
-
 					<div class="form-group">
-						<button type="submit" name="submit" class="btn btn-primary next">Add</button>
+						<input type="text" class="form-control" name="orderstatus" placeholder="Order Status">
 					</div>
-			<!-- </form> -->
+					<div class="form-group">
+						<button type="submit" name="submit" class="btn btn-primary">Create Purchase Order</button>
+					</div>
+			</form>
 		</div>
 </div>
+
 
 <!-- <div id="updateModal" class="modal"> -->
 	<!-- Modal content -->
