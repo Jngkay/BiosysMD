@@ -50,5 +50,23 @@
             $("#items-add").empty();
         });
 
+		$(".viewbtn").click(function () {
+			id_order = $(this).attr('id')
+			$.ajax({url: "../actions/vieworder.php",
+			method: 'post',
+			data:{order_id:id_order},
+			success: function(result){
+				$(".modalbody").html(result)
+			}});
+			$("#vieworderModal").show();
+
+		});
+
+		$(".close").click(function () {
+			$("#vieworderModal").hide();
+		});
+
+
+
 	});
 </script>

@@ -21,27 +21,29 @@
 				<th>Client Name</th>
 				<th>Orders</th>
 				<th>Status</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
 			<?php 
 			$sql = "SELECT DISTINCT ClientOrderNo,ClientName,orderStatus FROM clientorder";
 			$result = $conn->query($sql);
-			
-			if ($result->num_rows > 0) {
-			  // output data of each row
-			  while($row = $result->fetch_assoc()) {
-				echo '<tr>';
-					echo '<td>' . $row['ClientOrderNo'] . '</td>';
-					echo '<td>' . $row['ClientName'] . '</td>';
-					echo '<td><button>View Order</button></td>';
-					echo '<td>' . $row['orderStatus'] . '</td>';
-
-				echo '</tr>';
-			  }
-			} 
-			$conn->close();
 			?>
+			<?php if ($result->num_rows > 0): ?>
+				<?php while($row = $result->fetch_assoc()): ?>
+					<tr>
+						<td><?php echo $row["ClientOrderNo"]; ?></td>
+						<td><?php echo $row["ClientName"]; ?></td>	
+						<td><button class="viewbtn" id="<?php echo $row["ClientOrderNo"]; ?>">View Order</button></td>
+						<td><?php echo $row["orderStatus"]; ?></td>	
+						<td><button class="action update">Update</button><button class="action delete"">Delete</button></td>
+					</tr>
+
+				<?php endwhile; ?>
+			<?php endif; ?>
+
+			<?php $conn->close(); ?>
+					
 		</tbody>
 	</table>
 </body>
