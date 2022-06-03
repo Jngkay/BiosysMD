@@ -22,27 +22,29 @@
 					<th>Supplier Name</th>
 					<th>Order List</th>
 					<th>Status</th>
+					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php 
 					$sql = "SELECT DISTINCT PurchaseorderNo,SupplierName,OrderStatus FROM purchaseorder";
 					$result = $conn->query($sql);
-				
-				if ($result->num_rows > 0) {
-				// output data of each row
-					while($row = $result->fetch_assoc()) {
-						echo '<tr>';
-							echo '<td>' . $row['PurchaseorderNo'] . '</td>';
-							echo '<td>' . $row['SupplierName'] . '</td>';
-							echo '<td><button>View Order</button></td>';
-							echo '<td>' . $row['OrderStatus'] . '</td>';
-
-						echo '</tr>';
-						}
-				} 
-				$conn->close();
 				?>
+					<?php if ($result->num_rows > 0): ?>
+						<?php while($row = $result->fetch_assoc()): ?>
+							<tr>
+								<td><?php echo $row["PurchaseorderNo"]; ?></td>
+								<td><?php echo $row["SupplierName"]; ?></td>	
+								<td><button class="viewbtn" id="<?php echo $row["PurchaseorderNo"]; ?>">View Order</button></td>
+								<td><?php echo $row["OrderStatus"]; ?></td>	
+								<td><button class="action update">Update</button><button class="action delete">Delete</button></td>
+							</tr>
+		
+						<?php endwhile; ?>
+					<?php endif; ?>
+		
+					<?php $conn->close(); ?>
+		
 			</tbody>
 		</table>
 </body>

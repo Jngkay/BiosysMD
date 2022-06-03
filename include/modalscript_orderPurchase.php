@@ -41,12 +41,27 @@
 					$("#addPurchaseOrder").hide();
 				});
 
-			} );
+				$(".viewbtn").click(function () {
+				id_POorder = $(this).attr('id')
+				$.ajax({url: "../actions/viewPO.php",
+				method: 'post',
+				data:{POorder_id:id_POorder},
+				success: function(result){
+					$(".modalbody").html(result)
+				}});
+				$("#viewPO").show();
 
-            $(document).ready(function(){
-		        $('#next').click(function(){
+			});
+
+		$(".close").click(function () {
+			$("#viewPO").hide();
+		});
+
+
+		    $('#next').click(function(){
 			        var numberOrder = $('#numorder').val();
 			        $('#inputnum').val(numberOrder);
-		    });
-	});
-		</script>
+				});
+
+			} );
+</script>

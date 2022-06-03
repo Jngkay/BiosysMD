@@ -58,6 +58,16 @@
 			</form>
 		</div>
 </div>
+<div id="viewPO" class="modal">
+	<div class="modal-content">
+		<div class="header">
+			<h3 id="Title">Purchase Order Details</h3>
+			<span class="close">&times;</span>
+		</div>
+		<div class="modalbody">
+		</div>
+	</div>
+</div>
 
 
 <!-- <div id="updateModal" class="modal"> -->

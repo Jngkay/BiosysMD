@@ -37,3 +37,10 @@ thead{
 {
 	margin-bottom:10px;
 }
+.viewbtn{
+	border:none;
+	border-radius: 5px;
+  	padding:5px;;
+	background-color: #428956;
+	color:white;
+}
