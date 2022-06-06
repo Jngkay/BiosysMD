@@ -16,6 +16,10 @@ if(isset($_POST{'submit'})){
         $sql = "INSERT INTO clientorder (clientorderId, ClientOrderNo, ClientName, OrderItem, ItemQty, ItemPrice, orderStatus) VALUES ('$orderid', '$clientid', '$clientname', '$productid', '$quantity', '$unitprice', '$orderstatus' )";
        
         $conn->query($sql);
+
+        $queryy = "UPDATE products SET ProdQuantity = ProdQuantity - $quantity WHERE ProdId = $productid";
+        
+        $conn->query($queryy);
         
         $count++;
         
