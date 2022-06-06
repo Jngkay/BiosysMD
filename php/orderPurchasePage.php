@@ -37,7 +37,12 @@
 								<td><?php echo $row["SupplierName"]; ?></td>	
 								<td><button class="viewbtn" id="<?php echo $row["PurchaseorderNo"]; ?>">View Order</button></td>
 								<td><?php echo $row["OrderStatus"]; ?></td>	
-								<td><button class="action update">Update</button><button class="action delete">Delete</button></td>
+								<td>
+									<button class="action update">Update</button>
+									<a href="../actions/purchaseorder_delete.php?cid=<?php echo $row["PurchaseorderNo"]; ?>">
+										<button class="action delete" href="">Delete</button>
+									</a>
+								</td>
 							</tr>
 		
 						<?php endwhile; ?>
