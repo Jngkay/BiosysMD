@@ -65,8 +65,20 @@
 		$(".close").click(function () {
 			$("#vieworderModal").hide();
 		});
+	
 
-
+		$(".close").click(function () {
+			$("#updateStatus").hide();
+		});
+		
+		$(".update").click(function(){
+			$("#updateStatus").show();
+			var status = $(this).data("status");
+			var clientorderno = $(this).data("clientorderno");
+			
+			$("#OrderStatus").val(status);
+			$("#clientorderno").val(clientorderno);
+		});
 
 	});
 </script>
