@@ -3,7 +3,11 @@
 if(isset($_POST['POorder_id'])){
     $output = " ";
 
-    $query = "SELECT Orders, OrderQty,OrderPrice FROM purchaseorder WHERE PurchaseorderNo ='".$_POST['POorder_id']. "'";
+    $query = "SELECT products.ProdDescription, OrderQty, OrderPrice 
+        FROM purchaseorder
+        INNER JOIN products ON purchaseorder.Orders = products.ProdId
+        WHERE PurchaseorderNo ='".$_POST['POorder_id']. "'";
+
     $REsult = mysqli_query($conn,$query);
 
     while($row = mysqli_fetch_array($REsult))
@@ -13,7 +17,7 @@ if(isset($_POST['POorder_id'])){
             <table class="table table-bordered"
             <tr>
                 <td width="30%"><label> Order Item</label></td>
-                <td width="70%"> ' .$row["Orders"]. '</td>
+                <td width="70%"> ' .$row["ProdDescription"]. '</td>
             </tr>
             <tr>
                 <td width="30%"><label> Item Qty</label></td>
