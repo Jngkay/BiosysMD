@@ -44,7 +44,12 @@
                     <!-- Here are the items form generated -->
                     <div id="items-add"></div>
 					<div class="form-group">
-						<input type="text" class="form-control" name="orderStatus" placeholder="Order Status">
+						<label>Order Status</label>
+						<select name="orderStatus" class="form-control">
+							<option value="New">New</option>
+							<option value="Complete">Complete</option>
+							<option value="Cancelled">Cancelled</option>
+						</select>
 					</div>
 					<div class="form-group">
 						<button type="submit" name="submit" class="btn btn-primary">Create Order</button>
