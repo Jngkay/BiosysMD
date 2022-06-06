@@ -36,7 +36,8 @@
 						<td><?php echo $row["ClientName"]; ?></td>	
 						<td><button class="viewbtn" id="<?php echo $row["ClientOrderNo"]; ?>">View Order</button></td>
 						<td><?php echo $row["orderStatus"]; ?></td>	
-						<td><button class="action update">Update Status</button><button class="action delete"">Delete</button></td>
+						<td><button class="action update">Update Status</button>
+						<a class="action delete" href="../actions/orderclient_delete.php?clientorderno=<?php echo $row["ClientOrderNo"];?>">Delete</a></td>
 					</tr>
 
 				<?php endwhile; ?>
