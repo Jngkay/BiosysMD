@@ -26,7 +26,7 @@ if(isset($_POST['order_id'])){
                 </tr>
                 <tr>
                     <td width="30%"><label> Item Price</label></td>
-                    <td width="70%"> ' .$row["ItemPrice"]. '</td>
+                    <td width="70%"> ₱ ' .number_format($row["ItemPrice"],2). '</td>
                 </tr>
              </table>
         </div>
