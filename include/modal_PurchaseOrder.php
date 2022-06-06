@@ -49,9 +49,17 @@
 
                     <!-- Here are the items form generated -->
                     <div id="items-add"></div>
+
 					<div class="form-group">
-						<input type="text" class="form-control" name="orderstatus" placeholder="Order Status">
+						<label>Order Status</label>
+						<select name="orderstatus" class="form-control">
+							<option value="New">New</option>
+							<option value="Complete">Complete</option>
+							<option value="Cancelled">Cancelled</option>
+						</select>
 					</div>
+
+
 					<div class="form-group">
 						<button type="submit" name="submit" class="btn btn-primary">Create Purchase Order</button>
 					</div>
