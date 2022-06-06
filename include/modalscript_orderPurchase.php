@@ -42,26 +42,42 @@
 				});
 
 				$(".viewbtn").click(function () {
-				id_POorder = $(this).attr('id')
-				$.ajax({url: "../actions/viewPO.php",
-				method: 'post',
-				data:{POorder_id:id_POorder},
-				success: function(result){
-					$(".modalbody").html(result)
-				}});
-				$("#viewPO").show();
+					id_POorder = $(this).attr('id')
+					$.ajax({url: "../actions/viewPO.php",
+					method: 'post',
+					data:{POorder_id:id_POorder},
+					success: function(result){
+						$(".modalbody").html(result)
+					}});
+					$("#viewPO").show();
 
-			});
+				});
 
-		$(".close").click(function () {
-			$("#viewPO").hide();
-		});
+				$(".close").click(function () {
+					$("#viewPO").hide();
+				});
 
 
-		    $('#next').click(function(){
-			        var numberOrder = $('#numorder').val();
-			        $('#inputnum').val(numberOrder);
+			    $('#next').click(function(){
+				        var numberOrder = $('#numorder').val();
+				        $('#inputnum').val(numberOrder);
+					});
+
+			    // Update Status
+			    $(".update").click(function(){
+			    	var status = $(this).data("status");
+					var poID = $(this).data("id");
+					$("#orderStatus").val(status);
+					$("#poID").val(poID);
+
+					$("#updateStatus").show();
+				});
+
+			    $(".close").click(function(){
+					$("#updateStatus").hide();
 				});
 
 			} );
+
+
 </script>
