@@ -12,6 +12,7 @@ if(isset($_POST['POorder_id'])){
 
     while($row = mysqli_fetch_array($REsult))
     {
+        $peso_format = 
         $output .= '
         <div class="table-responsive">
             <table class="table table-bordered"
@@ -25,7 +26,7 @@ if(isset($_POST['POorder_id'])){
             </tr>
             <tr>
                 <td width="30%"><label> Item Price</label></td>
-                <td width="70%"> ' .$row["OrderPrice"]. '</td>
+                <td width="70%"> ₱ ' .number_format($row["OrderPrice"],2). '</td>
             </tr>
             </table>
         </div>
