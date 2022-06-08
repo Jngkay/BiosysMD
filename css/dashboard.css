@@ -1,3 +1,35 @@
 body{
 	background-color: #ededed;
 }
+.container{
+	margin-left: 18%;
+}
+.dashboard{
+	padding-top: 4%;
+	background-color:#57B471;
+	padding-bottom: 3%;
+}
+.analytics{
+	margin-left: 2%;
+	margin-right: 3%;
+	margin-top: 2%;
+}
+.sales{
+	margin-left: 2%;
+	margin-right: 3%;
+
+	margin-top: 2%;
+
+}
+.purchase{
+	margin-left: 2%;
+	margin-right: 3%;
+	margin-top: 2%;
+}
+.analytics .card-body{
+	height: 100px;
+}
+.dataTables_wrapper{
+	margin-left:0 !important;
+	width: 100%;
+}
