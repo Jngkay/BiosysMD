@@ -55,13 +55,14 @@
 				</div>
 			</div>
 			</div>
-		<div class="row sales">
-			<div class="col-sm-12">
+
+			<div class="row orders" >
+			<div class="col-sm-6">
 				<div class="card-group">
-						<div class="card">
-								<div class="card-body">
-									<h5 class="card-title">Recent Sales</h5>
-									<table id="recent_clientorder" class="display">
+					<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Sales Orders</h5>
+								<table id="recent_clientorder" class="display">
 										<thead>
 											<tr>
 												<th>Client Order No.</th>
@@ -83,38 +84,63 @@
 															</tr>
 														<?php endwhile; ?>
 													<?php endif; ?>
-												<?php
-													$conn->close();
-												?>
 											</tbody>
 									</table>
-								</div>
-						</div>
+							</div>
+					</div>
 				</div>
-		</div>
-		<div class="row purchase">
-			<div class="col-sm-12">
+			</div>
+
+			<div class="col-sm-6">
 				<div class="card-group">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title">Recent Purchase</h5>
-							<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+							<h5 class="card-title">Purchase Orders</h5>
+							<table id="recent_purchaseorder" class="display">
+								<thead>
+									<tr>
+										<th>Purchase Order No.</th>
+										<th>Supplier Name</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+										<?php 
+											$sql = "SELECT DISTINCT ClientOrderNo,ClientName,orderStatus FROM clientorder";
+											$result = $conn->query($sql);
+											?>
+											<?php if ($result->num_rows > 0): ?>
+												<?php while($row = $result->fetch_assoc()): ?>
+													<tr>
+														<td><?php echo $row["ClientOrderNo"]; ?></td>
+														<td><?php echo $row["ClientName"]; ?></td>	
+														<td><?php echo $row["orderStatus"]; ?></td>	
+													</tr>
+												<?php endwhile; ?>
+											<?php endif; ?>
+									</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		
 	</div>
 	</body>
 	<script>
 	$(document).ready(function () {
 		$('#recent_clientorder').DataTable();
+		$('#recent_purchaseorder').DataTable();
 		
 	});
 	var table = $('#recent_clientorder').DataTable({
-    pageLength : 5,
-    lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 'Todos']]
+    pageLength : 3,
+    lengthMenu: [[3, 10, 20, -1], [3, 10, 20, 'All']]
+  })
+  	var potable = $('#recent_purchaseorder').DataTable({
+    pageLength : 3,
+    lengthMenu: [[3, 10, 20, -1], [3, 10, 20, 'All']]
   })
 	</script>
 </html>

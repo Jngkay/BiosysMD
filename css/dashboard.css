@@ -8,6 +8,7 @@ body{
 	padding-top: 4%;
 	background-color:#57B471;
 	padding-bottom: 3%;
+	padding-left:2% ;
 }
 .analytics{
 	margin-left: 2%;
@@ -17,7 +18,6 @@ body{
 .sales{
 	margin-left: 2%;
 	margin-right: 3%;
-
 	margin-top: 2%;
 
 }
@@ -32,4 +32,13 @@ body{
 .dataTables_wrapper{
 	margin-left:0 !important;
 	width: 100%;
+}
+.orders .card-body{
+	height: 100px;
+	background: yellow !important;
+}
+.orders{
+	margin-left: 2%;
+	margin-right: 3%;
+	margin-top: 2%;
 }
