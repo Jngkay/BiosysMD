@@ -56,9 +56,9 @@
 					</div>
 				</div>
 			</div>
-			</div>
+		</div>
 
-			<div class="row orders" >
+		<div class="row orders" >
 			<div class="col-sm-6">
 				<div class="card-group">
 					<div class="card">
@@ -108,15 +108,15 @@
 								</thead>
 								<tbody>
 										<?php 
-											$sql = "SELECT DISTINCT ClientOrderNo,ClientName,orderStatus FROM clientorder";
-											$result = $conn->query($sql);
+											$SSql = "SELECT DISTINCT PurchaseorderNo,SupplierName,OrderStatus FROM purchaseorder";
+											$RResult = $conn->query($SSql);
 											?>
-											<?php if ($result->num_rows > 0): ?>
-												<?php while($row = $result->fetch_assoc()): ?>
+											<?php if ($RResult->num_rows > 0): ?>
+												<?php while($row = $RResult->fetch_assoc()): ?>
 													<tr>
-														<td><?php echo $row["ClientOrderNo"]; ?></td>
-														<td><?php echo $row["ClientName"]; ?></td>	
-														<td><?php echo $row["orderStatus"]; ?></td>	
+														<td><?php echo $row["PurchaseorderNo"]; ?></td>
+														<td><?php echo $row["SupplierName"]; ?></td>	
+														<td><?php echo $row["OrderStatus"]; ?></td>	
 													</tr>
 												<?php endwhile; ?>
 											<?php endif; ?>
