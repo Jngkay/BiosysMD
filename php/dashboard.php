@@ -13,12 +13,12 @@
 				<div class="card-group">
 					<div class="card">
 							<div class="card-body">
-								<h5 class="card-title">Products</h5>
+								<img src="../img/1.png" class="col-sm-3" alt="" id="icon">
 								<?php 
 								$sql = "SELECT * FROM products";
 								if ($result=mysqli_query($conn,$sql)) {
    							 	$rowcount=mysqli_num_rows($result);}?>
-								<p class="card-text"><?php echo $rowcount . " Items"?></p>
+								<p class="card-text"><?php echo "<span id='supplier'> $rowcount </span>"  . "<br>Products"?></p>
 							</div>
 					</div>
 				</div>
@@ -28,13 +28,13 @@
 				<div class="card-group">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title">Supplier</h5>
+								<img src="../img/3.png" class="col-sm-3" alt="" id="icon">
 							<?php 
 								$sqll = "SELECT * FROM supplier";
 								if ($Result=mysqli_query($conn,$sqll)) {
 								$rowcounter=mysqli_num_rows($Result);}
 							?>
-							<p class="card-text"><?php echo $rowcounter . " companies"?></p>
+							<p class="card-text"><?php echo "<span id='supplier'> $rowcounter </span>"  . "<br>Suppliers"?></p>
 							</div>
 					</div>
 				</div>
@@ -43,13 +43,14 @@
 				<div class="card-group">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title">Client</h5>
+								<img src="../img/2.png" class="col-sm-3" alt="" id="icon">
+							
 							<?php 
 								$Sqll = "SELECT * FROM clients";
 								if ($Resultt=mysqli_query($conn,$Sqll)) {
 								$Rowcounter=mysqli_num_rows($Resultt);}
 							?>
-							<p class="card-text"><?php echo $rowcounter . " customers"?></p>
+							<p class="card-text"><?php echo "<span id='supplier'> $Rowcounter </span>"  . "<br>Clients"?></p>
 						</div>
 					</div>
 				</div>
@@ -61,7 +62,7 @@
 				<div class="card-group">
 					<div class="card">
 							<div class="card-body">
-								<h5 class="card-title">Sales Orders</h5>
+								<h5 class="card-title orders">Sales Orders</h5>
 								<table id="recent_clientorder" class="display">
 										<thead>
 											<tr>
@@ -95,7 +96,7 @@
 				<div class="card-group">
 					<div class="card">
 						<div class="card-body">
-							<h5 class="card-title">Purchase Orders</h5>
+							<h5 class="card-title orders">Purchase Orders</h5>
 							<table id="recent_purchaseorder" class="display">
 								<thead>
 									<tr>
