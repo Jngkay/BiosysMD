@@ -29,8 +29,8 @@ This system is utilizing the CRUD functions to display, read and update the data
 ## Built With 🏗️
 * HTML
 * CSS
-* JAVASCRIPT
-* JQUERY
+* Javascript
+* JQuery
 * PHP
 * MySQL
 
@@ -52,7 +52,7 @@ Before the installation process, you need to download and install the software
 3. Set up the database
     * Make sure the phpmyadmin credential is default (username is root and there is no password)
     * If the credential is not default, change the value inside the database/db.php
-    * Open phpmyadmin, then import this sql file: <a href="#">biosysbd.sql</a>
+    * Open phpmyadmin, then import this sql file (download the file first): <a href="https://github.com/Jngkay/BiosysMD/blob/main/database/biosysdb.sql" target="_blank">biosysbd.sql</a>
     * The default username and password of BiosysMD Website is **admin**
     
 3. You can now run the project in your local machine
