@@ -10,5 +10,7 @@
 	<link href="../css/table.css" rel="stylesheet" type="text/css" />
 	<link href="../css/ViewOrder.css" rel="stylesheet" type="text/css" />	
 	<link href="../css/modal.css" rel="stylesheet" type="text/css" />
-
-</head>
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+	
+	</head>

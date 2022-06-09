@@ -1,5 +1,5 @@
 <html>
-	<?php include('../include/header.php');?>
+	<?php $page = 'orderPage'; include('../include/header.php');?>
 	<?php include('../include/navbar.php');?>
 	<link href="../css/orderPage.css" rel="stylesheet" type="text/css" />
 	<body>

@@ -94,7 +94,7 @@ a, a:hover, a:focus {
 }
 #sidebar ul li a:hover {
     color: #ffffff;
-    background: #57B471;
+    background: #85d89d;
 }
 
 ul ul a {
@@ -117,4 +117,14 @@ ul ul a {
 #tagline {
   font-size: 0.6em;
 	font-weight: normal;
+}
+
+.fi{
+  margin-right: 10px;
+}
+.active{
+  background: #57B471;
+}
+.active > a, .active > li {
+   color: white !important;
 }

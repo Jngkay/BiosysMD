@@ -1,5 +1,5 @@
 <html>
-	<?php include('../include/header.php');?>
+	<?php $page = 'settingPage'; include('../include/header.php');?>
 	<?php include('../include/navbar.php');?>
 	<link href="../css/settingPage.css" rel="stylesheet" type="text/css" />
 	<body>

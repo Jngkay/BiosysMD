@@ -1,3 +1,81 @@
 body{
 	background-color: #ededed;
 }
+.container{
+	margin-left: 18%;
+}
+.dashboard{
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color:#f1f1f1;
+	margin-left:3%;
+	margin-right:4%;
+	color: black;
+	font-size: 1.5rem;
+}
+.analytics{
+	margin-left: 2%;
+	margin-right: 3%;
+	margin-top: 2%;
+	color: white;
+}
+.sales{
+	margin-left: 2%;
+	margin-right: 3%;
+	margin-top: 2%;
+
+}
+.purchase{
+	margin-left: 2%;
+	margin-right: 3%;
+	margin-top: 2%;
+}
+.analytics .card-body{
+	display: flex;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #57B471;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.dataTables_wrapper{
+	margin-left:0 !important;
+	width: 100%;
+	border-radius: 5px;
+	border: none !important;
+	box-shadow: none !important;
+}
+.orders .card-body{
+
+	background: white !important;
+	border-radius: 5px;
+}
+.orders{
+	margin-left: 2%;
+	margin-right: 3%;
+	margin-top: 2%;
+}
+h5.card-title.orders{
+	color: rgb(0, 0, 0) !important;
+}
+.card-text{
+	color: white;
+	font-size: 20px;
+}
+img#icon{
+	border-radius: 50%;
+}
+table th{
+	background: white;
+	color: black;
+	border-top: 1px solid black;
+}
+table td{
+	background: white;
+	color: black;
+}
+span#supplier{
+	font-size: 3.5rem;
+}
