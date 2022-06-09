@@ -55,3 +55,12 @@
     margin: 0;
     padding-top:10px;
 }
+.next{
+    background-color: #3C75B8;
+    color: white;
+    font-size: 1.0rem;;
+}
+#status{
+    width: 55%;
+    font-size: 1.5rem;
+}

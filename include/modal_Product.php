@@ -57,7 +57,7 @@
 				</div>
                 <!-- Product ID --><input name="ProdId" id="ProdId" type="hidden">
 				<div class="form-group">
-					<button type="submit" name="submit"class="btn btn-primary">Add</button>
+					<button type="submit" name="submit"class="btn btn-primary">Update Product</button>
 				</div>
 		</form>
 	</div>

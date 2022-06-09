@@ -14,8 +14,6 @@ $(".update").click(function(){
   $("#prodUprice").val(unitprice);
   $("#expiry").val(expiry);
   $("#ProdId").val(prodId);
-
-
 });
 
 $(".close").click(function(){

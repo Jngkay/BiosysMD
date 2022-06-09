@@ -6,6 +6,7 @@ table{
 thead{
 	background:#57B471;
 	color:white;
+
 }
 .dataTables_wrapper{
 	width:80%;
@@ -36,4 +37,11 @@ thead{
 .dataTables_filter
 {
 	margin-bottom:10px;
+}
+.viewbtn{
+	border:none;
+	border-radius: 5px;
+  	padding:5px;;
+	background-color: #428956;
+	color:white;
 }
