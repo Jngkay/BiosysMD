@@ -74,7 +74,7 @@
 										</thead>
 											<tbody>
 												<?php 
-													$sql = "SELECT DISTINCT ClientOrderNo,ClientName,orderStatus FROM clientorder";
+													$sql = "SELECT DISTINCT ClientOrderNo,ClientName,orderStatus FROM clientorder ORDER BY ClientOrderNo DESC LIMIT 3";
 													$result = $conn->query($sql);
 													?>
 													<?php if ($result->num_rows > 0): ?>
@@ -108,7 +108,7 @@
 								</thead>
 								<tbody>
 										<?php 
-											$SSql = "SELECT DISTINCT PurchaseorderNo,SupplierName,OrderStatus FROM purchaseorder";
+											$SSql = "SELECT DISTINCT PurchaseorderNo,SupplierName,OrderStatus FROM purchaseorder ORDER BY PurchaseorderNo DESC LIMIT 3  ";
 											$RResult = $conn->query($SSql);
 											?>
 											<?php if ($RResult->num_rows > 0): ?>
@@ -138,11 +138,11 @@
 	});
 	var table = $('#recent_clientorder').DataTable({
     pageLength : 3,
-    lengthMenu: [[3, 10, 20, -1], [3, 10, 20, 'All']]
+    lengthMenu: [[3], [3]]
   })
   	var potable = $('#recent_purchaseorder').DataTable({
     pageLength : 3,
-    lengthMenu: [[3, 10, 20, -1], [3, 10, 20, 'All']]
+    lengthMenu: [[3], [3]]
   })
 	</script>
 </html>
