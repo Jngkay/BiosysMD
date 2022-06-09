@@ -1,5 +1,5 @@
 <html>
-	<?php include('../include/header.php');?>
+	<?php $page = 'viewPage'; include('../include/header.php');?>
 	<?php include('../include/navbar.php');?>
 	<?php include('../database/db.php');?> 
 	<body>

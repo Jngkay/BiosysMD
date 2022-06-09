@@ -1,5 +1,6 @@
 <html>
-	<?php include('../include/header.php');?>
+
+	<?php $page = 'dashboard'; include('../include/header.php');?>
 	<?php include('../include/navbar.php');?>
 	<?php include('../database/db.php');?> 
 	<link href="../css/dashboard.css" rel="stylesheet" type="text/css" />	
