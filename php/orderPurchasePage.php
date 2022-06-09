@@ -1,8 +1,20 @@
 <html>
-	<?php include('../include/header.php');?>
-	<?php include('../include/navbar.php');?>
+	<?php 
+		include('../include/header.php');
+		include('../include/navbar.php');
+		include('../database/db.php');
+		
+		$s = "SELECT * FROM products"; 
+		$res = $conn->query($s);	
+	?>
+
 <body>
-	<div class="label clientOrder">List of Purchase Orders</div>
+	<div class="label clientOrder">
+		List of Purchase Orders
+		<button id="myBtn">Add</button>
+		<!-- The Modal -->
+		<?php include('../include/modal_PurchaseOrder.php');?>
+	</div>
 		<table id="purchaseOrder_list" class="display">
 			<thead>
 				<tr>
@@ -10,58 +22,41 @@
 					<th>Supplier Name</th>
 					<th>Order List</th>
 					<th>Status</th>
-					<th>Total Amount</th>	
 					<th>Action</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>BMT0001</td>
-					<td>Bioline Medical System</td>	
-					<td>Solution Pack Expand</td>	
-					<td>Complete</td>	
-					<td>104,000.00</td>	
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0002</td>
-					<td>JMB Medical Trading</td>	
-					<td>LightWeight WheelChair</td>	
-					<td>Complete</td>	
-					<td>50,000.00</td>	
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0003</td>
-					<td>Labsolution Technologies Inc.</td>	
-					<td>HBA1C IChroma</td>	
-					<td>Complete</td>	
-					<td>5,000.00</td>	
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0004</td>
-					<td>Bioline Medical System</td>	
-					<td>Urine Strips 4SG</td>	
-					<td>Complete</td>	
-					<td>90,400.00</td>		
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
-				<tr>
-					<td>BMT0005</td>
-					<td>Sterilab Co.</td>	
-					<td>Specimen Colection Cup</td>	
-					<td>Complete</td>	
-					<td>2,400.00</td>		
-					<td><button class="action delete">Delete</button></td>	
-				</tr>
+				<?php 
+					$sql = "SELECT DISTINCT PurchaseorderNo,SupplierName,OrderStatus FROM purchaseorder";
+					$result = $conn->query($sql);
+				?>
+					<?php if ($result->num_rows > 0): ?>
+						<?php while($row = $result->fetch_assoc()): ?>
+							<tr>
+								<td><?php echo $row["PurchaseorderNo"]; ?></td>
+								<td><?php echo $row["SupplierName"]; ?></td>	
+								<td><button class="viewbtn" id="<?php echo $row["PurchaseorderNo"]; ?>">View Order</button></td>
+								<td><?php echo $row["OrderStatus"]; ?></td>	
+								<td>
+									<button class="action update" id="update-status" 
+									data-id="<?php echo $row["PurchaseorderNo"]; ?>" 
+									data-status="<?php echo $row["OrderStatus"]; ?>" >
+										Update Status
+									</button>
+
+									<a href="../actions/purchaseorder_delete.php?cid=<?php echo $row["PurchaseorderNo"]; ?>">
+										<button class="action delete" href="">Delete</button>
+									</a>
+								</td>
+							</tr>
+		
+						<?php endwhile; ?>
+					<?php endif; ?>
+		
+					<?php $conn->close(); ?>
+		
 			</tbody>
 		</table>
 </body>
-			<script>
-			$(document).ready( function () {
-    $('#purchaseOrder_list').DataTable();
-} );
-		</script>
-	
+	<?php include('../include/modalscript_orderPurchase.php');?>
 </html>
