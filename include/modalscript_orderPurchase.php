@@ -1,10 +1,6 @@
 <script>
 			$(document).ready( function () {
 				var itemprice = {};
-				var formatter = new Intl.NumberFormat('en-US', {
-				  style: 'currency',
-				  currency: 'PHP',
-				});
 
 				$('#purchaseOrder_list').DataTable();
 
@@ -23,7 +19,7 @@
 							<select class="form-select" name="productId[]" id="select-products${x}">
                                 <?php if ($res->num_rows > 0): ?>
                                     <?php while($row = $res->fetch_assoc()): ?>	
-                                    	${itemprice[<?php echo $row["ProdId"] ?>] = "<?php echo $row["ProdUnitPrice"]?>"};			
+                                    	${itemprice[<?php echo $row["ProdId"] ?>] = "<?php echo sprintf('%0.2f', $row["ProdUnitPrice"])?>"};			
                                         <option value="<?php echo $row["ProdId"]?>"> <?php echo $row["ProdDescription"]?> </option>
                                     <?php endwhile; ?>
                                 <?php endif; ?>
@@ -33,19 +29,19 @@
                                 <input type="text" class="form-control" name="qty[]" placeholder="Quantity">
 							</div>
                             <div class="form-group">
-                            	<input type="text" class="form-control" id="price${x}" name="unitPrice[]" placeholder="Unit Price">
+                            	<input type="text" class="form-control" id="price${x}" name="unitPrice[]" placeholder="Unit Price ₱">
 							</div>
 						`);
 
 						var getProductId = $("#select-products1 :selected").val();
-						$("#price" + x).val(formatter.format(itemprice[getProductId]));
+						$("#price" + x).val(itemprice[getProductId]);
 					};
 
 					$('select').change(function () {
 						var getItemId = $(this).prop("id");
 						var getnumber = parseInt(getItemId.replace(/[^0-9.]/g, ""));
 						var getProductId = $("#" + getItemId + ' :selected').val();
-						$("#price" + getnumber).val(formatter.format(itemprice[getProductId]));
+						$("#price" + getnumber).val(itemprice[getProductId]);
 					}); 
 
 				});
