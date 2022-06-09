@@ -16,6 +16,7 @@
 					for(var x = 1; x <= $("#numorder").val(); x++){
 						$("#items-add").append(`
 							<h4 id="Title">Item ${x}: </h4>
+							
 							<select class="form-select" name="productId[]" id="select-products${x}">
                                 <?php if ($res->num_rows > 0): ?>
                                     <?php while($row = $res->fetch_assoc()): ?>	
@@ -28,9 +29,13 @@
 							<div class="form-group">
                                 <input type="text" class="form-control" name="qty[]" placeholder="Quantity">
 							</div>
-                            <div class="form-group">
-                            	<input type="text" class="form-control" id="price${x}" name="unitPrice[]" placeholder="Unit Price ₱">
-							</div>
+
+							<div class="input-group">
+						        <div class="input-group-prepend">
+						          <span class="input-group-text" id="inputGroupPrepend">₱</span>
+						        </div>
+	                        	<input type="text" class="form-control" id="price${x}" name="unitPrice[]" placeholder="Unit Price ₱">
+						    </div>
 						`);
 
 						var getProductId = $("#select-products1 :selected").val();
