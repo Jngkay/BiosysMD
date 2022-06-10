@@ -3,12 +3,29 @@ body{
 }
 
 .container{
-	background: green;
+	background: rgb(160, 160, 15);
 	margin-left: 20%;
-	
+	display: inline;
+}
+.card{
+	background: white;
+	margin-left: 25%;
+	margin-right: 5%;
+}
+
+.row.two{
+	height: 50px;
 
 }
-.row{
-	background: gray;
-	margin-right: 6%;
+.row.three{
+	height: 50px;
+}
+.card-header{
+	height: 70px;
+	font-size: 1.5rem;
+	padding-top: 20px;
+	background: white;
+}
+.fi.setting{
+	font-size: 30px;
 }

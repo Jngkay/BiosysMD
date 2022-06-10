@@ -4,23 +4,41 @@
 	<?php include('../include/navbar.php');?>
 	<link href="../css/settingPage.css" rel="stylesheet" type="text/css" />
 	<body>
-	
 		<div class="container">
-			<div class="row">
-				<?php 
-				$sql="SELECT * FROM users";
-				$result=$conn->query($sql);?>
-				<?php if ($result->num_rows > 0): ?>
-					<?php while($row = $result->fetch_assoc()): ?>
-						<?php echo 'HI!' . $row["UserName"]; ?>
-					<?php endwhile; ?>
-				<?php endif; ?>
-			
-
-			</div>
-			<div class="row">
-				<div class="col-sm-6"></div>
-				<div class="col-sm-6"> </div>
+			<div class="card">
+				<h5 class="card-header">
+					<?php 
+					$sql="SELECT * FROM users";
+					$result=$conn->query($sql);?>
+					<?php if ($result->num_rows > 0): ?>
+						<?php while($row = $result->fetch_assoc()): ?>
+							<?php echo 'HI! ' . $row["UserName"]; ?>
+						<?php endwhile; ?>
+					<?php endif; ?>
+				</h5>
+				<div class="card-body">
+					<h5 class="card-title">Setting</h5>
+					<p class="card-text">
+						<div class="row two">
+							<div class="col-sm-7">
+								<i class="fi setting fi-rs-comment-user"></i>
+								<input type="text" placeholder="Username">
+							</div>
+							<div class="col-sm-5">
+								<button>Change</button>
+							</div>
+						</div>
+						<div class="row three">
+							<div class="col-sm-7">
+							<i class="fi setting fi-rr-lock"></i>
+							<input type="text" placeholder="Password">
+							</div>
+							<div class="col-sm-5"> 
+								<button>Change</button>
+							</div>
+						</div>
+					</p>
+				</div>
 			</div>
 		</div>
 		<!--
