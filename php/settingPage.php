@@ -4,42 +4,35 @@
 	<?php include('../include/navbar.php');?>
 	<link href="../css/settingPage.css" rel="stylesheet" type="text/css" />
 	<body>
-		<div class="container">
-			<div class="card">
-				<h5 class="card-header">
-					<?php 
-					$sql="SELECT * FROM users";
-					$result=$conn->query($sql);?>
-					<?php if ($result->num_rows > 0): ?>
-						<?php while($row = $result->fetch_assoc()): ?>
-							<?php echo 'HI! ' . $row["UserName"]; ?>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</h5>
-				<div class="card-body">
-					<h5 class="card-title">Setting</h5>
-					<p class="card-text">
-						<div class="row two">
-							<div class="col-sm-7">
-								<i class="fi setting fi-rs-comment-user"></i>
-								<input type="text" placeholder="Username">
+	<div class="container setting">
+		<div class="row">
+		    <div class="col-sm-7">
+					<div class="leftcol">
+						<img id="settinglogo" src="../img/settingicon.png">
+					</div>
+				</div>
+		    <div class="col-sm-5">
+					<div class="rightcol">
+						<h1 id="settinglabel">SETTING</h1>
+						<div class="usernamepass">
+							<div class="username">
+								<label for="">Username</label><br>
+								<input type="text" placeholder="username"><i class="fi setting fi-rr-edit"></i>
 							</div>
-							<div class="col-sm-5">
-								<button>Change</button>
+							<div class="pass">
+								<label for="">Password</label><br>
+								<input type="text" placeholder="password"><i class="fi setting fi-rr-edit"></i>
 							</div>
-						</div>
-						<div class="row three">
-							<div class="col-sm-7">
-							<i class="fi setting fi-rr-lock"></i>
-							<input type="text" placeholder="Password">
 							</div>
-							<div class="col-sm-5"> 
-								<button>Change</button>
-							</div>
-						</div>
-					</p>
+						
+								
+						
+								  
+								
+					</div>
 				</div>
 			</div>
+		</div>
 		</div>
 		<!--
 		<div class="form_update">

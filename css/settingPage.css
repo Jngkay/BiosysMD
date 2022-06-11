@@ -3,7 +3,7 @@ body{
 }
 
 .container{
-	background: rgb(160, 160, 15);
+
 	margin-left: 20%;
 	display: inline;
 }
@@ -27,5 +27,39 @@ body{
 	background: white;
 }
 .fi.setting{
-	font-size: 30px;
+	font-size: 20px;
+	color: green;
+	margin-left: 10px;
+}
+.leftcol{
+	margin-left: 20%;
+	background: white;
+	margin-top: 5%;
+	border-right: 1px solid green;
+}
+.row{
+	margin-left: 23%;
+	background: white;
+	height: 400px;
+	margin-right: 7%;
+	font-family:'Arya', sans-serif;
+}
+#settinglogo{
+	margin-top: 5%;
+	width: 300PX;
+	
+}
+.rightcol{
+	margin-left: 17%;
+}
+#settinglabel{
+	margin-top: 20%;
+	margin-left: 15%;
+}
+.usernamepass{
+	margin-top: 10%;
+	font-size: 20px;
+}
+.username{
+	margin-bottom: 5%;
 }
