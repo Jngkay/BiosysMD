@@ -15,8 +15,6 @@ if ($result->num_rows > 0) {
 
    if($unamefromdb == $uname){
       if($pwordfromdb == $pword){
-        session_start();
-        $_SESSION["user"] = $unamefromdb;
         header('Location: ../php/dashboard.php');
       }
       else{
