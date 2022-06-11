@@ -1,3 +1,10 @@
+<?php 
+	session_start();
+
+	if(	$_SESSION["user"] != "admin"){
+		header("location: ../index.php");
+	}
+?>
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
