@@ -1,7 +1,6 @@
-
 <?php 
     session_start();
-    if($_SESSION["user"] != NULL ){
+    if(isset($_SESSION["user"])){
         header("location: php/dashboard.php");
     }
 ?>
