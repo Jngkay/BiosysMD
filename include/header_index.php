@@ -1,8 +1,8 @@
 <?php 
-	session_start();
-	if($_SESSION["user"] != "admin"){
-		header("location: ../index.php");
-	}
+    session_start();
+    if(isset($_SESSION["user"])){
+        header("location: php/dashboard.php");
+    }
 ?>
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
