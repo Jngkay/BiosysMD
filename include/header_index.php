@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    if($_SESSION["user"] == ""){
+    if($_SESSION["user"] != NULL ){
         header("location: php/dashboard.php");
     }
 ?>
