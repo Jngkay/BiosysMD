@@ -1,9 +1,8 @@
 <?php 
-	session_start();
-
-	if(	$_SESSION["user"] != "admin"){
-		header("location: ../index.php");
-	}
+    session_start();
+    if($_SESSION["user"] != NULL ){
+        header("location: php/dashboard.php");
+    }
 ?>
 
 <head>
@@ -22,5 +21,5 @@
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
 	<title>Biosys Medical Trading</title>
-	<link rel="icon" type="image/x-icon" href="../img/logo.png">
-	</head>
+    <link rel="icon" type="image/x-icon" href="../img/logo.png">
+</head>

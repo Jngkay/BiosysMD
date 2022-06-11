@@ -24,7 +24,7 @@
 				  <i class="fi fi-rr-settings-sliders"></i>Settings</a>
 			  </li>
 				<li>
-				  <a id="label">
+				  <a id="label" href="../actions/logout.php">
 				  <i class="fi fi-sr-sign-out"></i>Log out</a>
 			  </li>
 		  </ul>
