@@ -7,9 +7,9 @@
 			<div class="label">User Profile</div>
 		</div>
 		<div class="form_update">
-			<form>
+			<form action="../actions/update_password.php" method="POST">
 				<label>Change Password</label>
-				<input type="password" placeholder="Password">
+				<input type="password" name="password" placeholder="Password">
 				<button>Update</button>
 			</form>
 		</div>
