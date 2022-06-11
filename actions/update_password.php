@@ -3,7 +3,7 @@
     $sql = "UPDATE users SET UserPassword='$password'";
 
     if ($conn->query($sql) === TRUE) {
-        header('Location: ../php/settingPage.php');
+        header('Location: ../actions/logout.php');
     } else {
     echo "Error updating record: " . $conn->error;
     }
