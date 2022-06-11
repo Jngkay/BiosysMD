@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    if($_SESSION["user"] == ""){
+        header("location: php/dashboard.php");
+    }
+?>
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,5 +18,4 @@
 	<link href="../css/modal.css" rel="stylesheet" type="text/css" />
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-	
-	</head>
+</head>
