@@ -19,6 +19,7 @@
 	<link href="../css/modal.css" rel="stylesheet" type="text/css" />
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
 	<title>Biosys Medical Trading</title>
 	<link rel="icon" type="image/x-icon" href="../img/logo.png">
-	</head>
+</head>
