@@ -15,20 +15,13 @@
 					<div class="rightcol">
 						<h1 id="settinglabel">SETTING</h1>
 						<div class="usernamepass">
-							<div class="username">
-								<label for="">Username</label><br>
-								<input type="text" placeholder="username"><i class="fi setting fi-rr-edit"></i>
+							<form action="../actions/update_password.php" method="POST">
+								<div class="pass">
+									<label for="">Password</label><br>
+									<input type="password" placeholder="password" name="password"><i class="fi setting fi-rr-edit"></i>
+								</div>
+							</form>
 							</div>
-							<div class="pass">
-								<label for="">Password</label><br>
-								<input type="text" placeholder="password"><i class="fi setting fi-rr-edit"></i>
-							</div>
-							</div>
-						
-								
-						
-								  
-								
 					</div>
 				</div>
 			</div>
