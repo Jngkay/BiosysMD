@@ -33,7 +33,7 @@
 								<td><?php echo $row["ProdDescription"]; ?></td>	
 								<td><?php echo $row["ProdQuantity"]; ?></td>	
 								<td><?php echo $row["ProdUnit"]; ?></td>	
-								<td><?php echo $row["ProdUnitPrice"]; ?></td>	
+								<td><?php echo number_format($row["ProdUnitPrice"], 2); ?></td>	
 								<td><?php echo $row["ProdExpiry"]; ?></td>	
 								<td><button class="action update" 
 								data-id="<?php echo $row["ProdId"]; ?>"
@@ -57,7 +57,7 @@
 	<script>
 			$(document).ready( function () {
 					$('#product_list').DataTable();
-			} );
+			});
 	</script>
 	<script src="../include/modalscript.js"></script>
 	</body>
