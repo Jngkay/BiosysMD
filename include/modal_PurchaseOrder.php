@@ -4,7 +4,7 @@
 			<form name="form" action="#" method="get">
 
 				<div class="header">
-					<h3 id="Title">Number</h3>
+					<h3 id="Title">Create Purchase Order</h3>
 					<span class="close">&times;</span>
 				</div>
 
@@ -33,8 +33,8 @@
 					$Sql = "SELECT * FROM supplier"; 
 					$Result = $conn->query($Sql);	
 				?>
-					<div class="form-group">
-						<input type="text" class="form-control" name="purchaseorderno" placeholder="Purchase Order No.">
+					<div class="form-group pono">
+						<input type="text" class="form-control" name="purchaseorderno" value="<?php echo date('dHis'); ?>"placeholder="Purchase Order No.">
 					</div>
 
                     <select class="form-select" name="supplierName">
