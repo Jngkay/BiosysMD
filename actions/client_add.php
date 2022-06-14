@@ -2,11 +2,11 @@
 
 if(isset($_POST{'submit'})){
     $clientname = $_POST['clientname'];
-    $clientaddress = $_POST['clientname'];
+    $clientaddress = $_POST['clientaddress'];
    
 
     $sql = "INSERT INTO `clients` (ClientName, ClientAddress) 
-    VALUES ('$clientname', '$clientaddress')";
+    VALUES ('$clientname','$clientaddress')";
     $result = mysqli_query($conn,$sql); 
 
     if($result){
