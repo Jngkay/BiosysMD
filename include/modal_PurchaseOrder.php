@@ -22,7 +22,7 @@
 <div id="addPurchaseOrder" class="modal">
 	<!-- Modal content -->
 		<div class="modal-content">
-		<form action="../actions/orderpurchase_add.php" method="POST">
+		<form onsubmit="return alert('Purchase Order added.');" action="../actions/orderpurchase_add.php" method="POST">
 				<input type="hidden" name="numorder" id="inputnum">
 				<div class="header">
 					<h3 id="Title">Add Purchase Order</h3>
