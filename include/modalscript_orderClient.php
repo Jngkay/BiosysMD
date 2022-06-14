@@ -26,7 +26,9 @@
 						<?php if ($res->num_rows > 0): ?>
 							<?php while($row = $res->fetch_assoc()): ?>	
                                 ${itemprice[<?php echo $row["ProdId"] ?>] = "<?php echo sprintf('%0.2f', $row["ProdUnitPrice"])?>"};					
+								<?php if($row["ProdQuantity"] > 0): ?>
 								<option value="<?php echo $row["ProdId"]?>"> <?php echo $row["ProdDescription"]?> </option>
+								<?php endif; ?>	
 							<?php endwhile; ?>
 						<?php endif; ?>
 					</select>
