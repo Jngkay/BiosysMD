@@ -30,8 +30,9 @@
 									<label id="change">Click button to change</label><i class="fi setting fi-rr-edit" data-toggle="modal" data-target="#PasswordChange" id="passicon"></i>
 										<div id="PasswordChange" class="modal">
 										<div class="modal-content">
-											<form action="../actions/update_password.php" method="POST">
-												<div class="header">
+											<!--<form action="../actions/update_password.php" method="POST">-->
+											<form onsubmit="return confirm('You are about to change your password, click yes to proceed.')" action="../actions/update_password.php" method="POST">
+											<div class="header">
 													<h3 id="Title">Change Password</h3>
 													<span class="close">&times;</span>
 												</div>
