@@ -17,7 +17,7 @@
 
 <div id="addClientOrder" class="modal">
     <div class="modal-content">
-			<form action="../actions/orderclient_add.php" method="POST">
+			<form onsubmit="return alert('Client Order added.');" action="../actions/orderclient_add.php" method="POST">
 				<input type="hidden" name="numorder" id="inputnum">
 				<div class="header">
 					<h3 id="Title">Add Client Order</h3>
