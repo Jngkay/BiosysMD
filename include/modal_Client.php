@@ -1,6 +1,6 @@
 <div id="myModal" class="modal">
     <div class="modal-content">
-		<form action="../actions/client_add.php" method="POST">
+		<form onsubmit="return alert('Client successfully added.');" action="../actions/client_add.php" method="POST">
 		    <div class="header">
 				<h3 id="Title">Create Client</h3>
 				<span class="close">&times;</span>
