@@ -1,5 +1,6 @@
 <html>
 <?php include('include/header_index.php');?>
+
 	<link href="css/index.css" rel="stylesheet" type="text/css" />
 <body>
 		<div class="container-fluid">
@@ -29,5 +30,7 @@
 			</div>
 		</div>
 </body>
+<?php include('include/footer.php');?>
 </html>
+
 
