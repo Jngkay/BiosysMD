@@ -84,7 +84,6 @@
 			<h3 id="Title">Update Order Status</h3>
 			<span class="close">&times;</span>
 		</div>
-		<div class="modalbody">
 			<form action="../actions/orderpurchase_update.php" method="POST">
 				<div class="form-group">
 					<select name="orderstatus" class="form-control" id="orderStatus">
@@ -93,10 +92,11 @@
 						<option value="Cancelled">Cancelled</option>
 					</select>
 				</div>
+				<div class="form-group">
+					<button type="submit" name="submit"class="btn btn-primary">Update</button>
+				</div>
 				<input type="hidden" id="poID" name="purchaseOrderID">
-				<button type="submit" name="submit" class="btn btn-primary">Update</button>
 			</form>
-		</div>
 	</div>
 </div>
 <script>

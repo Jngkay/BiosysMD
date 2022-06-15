@@ -86,12 +86,14 @@
 				});
 			    // Update Status
 			    $(".update").click(function(){
+					$("#updateStatus").show();
+					
 			    	var status = $(this).data("status");
 					var poID = $(this).data("id");
 					$("#orderStatus").val(status);
 					$("#poID").val(poID);
 
-					$("#updateStatus").show();
+					
 				});
 
 			    $(".close").click(function(){
