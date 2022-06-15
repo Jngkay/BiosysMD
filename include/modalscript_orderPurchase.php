@@ -57,6 +57,12 @@
 
 				$(".close").click(function(){
 					$("#addPurchaseOrder").hide();
+					$("#items-add").empty();
+				});
+				$("#add-submit").click(function(){
+					alert("Test");
+					$("#addPurchaseOrder").hide();
+					$("#items-add").empty();
 				});
 
 				$(".viewbtn").click(function () {
@@ -94,6 +100,9 @@
 			    $(".close").click(function(){
 					$("#updateStatus").hide();
 				});
+
+				
+
 
 			} );
 
