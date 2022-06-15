@@ -65,7 +65,6 @@
 			$("#items-add").empty();
 		});
         $("#add-submit").click(function(){
-            alert("Test");
             $("#addClientOrder").hide();
             $("#items-add").empty();
         });

@@ -61,7 +61,7 @@
 
 
 					<div class="form-group">
-						<button type="submit" name="submit"  id="add-submit"  class="btn btn-primary">Create Purchase Order</button>
+						<button type="submit" name="submit"  class="btn btn-primary">Create Purchase Order</button>
 					</div>
 			</form>
 		</div>
@@ -99,3 +99,11 @@
 		</div>
 	</div>
 </div>
+<script>
+	$(document).ready(function(){
+		$('#next').click(function(){
+			var numberOrder = $('#numorder').val();
+			$('#inputnum').val(numberOrder);
+		});
+	});
+	</script>				

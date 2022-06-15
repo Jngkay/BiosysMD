@@ -14,16 +14,11 @@ if(isset($_POST{'submit'})){
         $unitprice = $_POST['unitPrice'][$counter];
 
         // Add Purchase Order
-        $sql = "INSERT INTO purchaseorder (PurchaseorderId, PurchaseorderNo, SupplierName, Orders, OrderQty, OrderPrice, OrderStatus) VALUES ('$orderid', '$purchaseorderno', '$suppliername', '$productID', '$quantity', '$unitprice', '$orderstatus')
-        ";
+        $sql = "INSERT INTO purchaseorder (PurchaseorderId, PurchaseorderNo, SupplierName, Orders, OrderQty, OrderPrice, OrderStatus) VALUES ('$orderid', '$purchaseorderno', '$suppliername', '$productID', '$quantity', '$unitprice', '$orderstatus')";
         $conn->query($sql);
 
          // Update Product
-        $quer = "
-            UPDATE products 
-            SET ProdQuantity = ProdQuantity + $quantity 
-            WHERE ProdId = $productID
-        ";
+        $quer = "UPDATE products SET ProdQuantity = ProdQuantity + $quantity WHERE ProdId = $productID";
 
         $conn->query($quer);
 

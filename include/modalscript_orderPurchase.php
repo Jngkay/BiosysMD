@@ -7,6 +7,9 @@
 				$("#myBtn").click(function(){
 					$("#myModal").show();
 				});
+				$(".close").click(function(){
+					$("#myModal").show();
+				});
 
 				$(".next").click(function(e){
 					e.preventDefault();
@@ -21,8 +24,10 @@
                                 <?php if ($res->num_rows > 0): ?>
                                     <?php while($row = $res->fetch_assoc()): ?>	
                                     	${itemprice[<?php echo $row["ProdId"] ?>] = "<?php echo sprintf('%0.2f', $row["ProdUnitPrice"])?>"};			
-                                        <option value="<?php echo $row["ProdId"]?>"> <?php echo $row["ProdDescription"]?> </option>
-                                    <?php endwhile; ?>
+                                        <?php if($row["ProdQuantity"] > 0): ?>
+										<option value="<?php echo $row["ProdId"]?>"> <?php echo $row["ProdDescription"]?> </option>
+										<?php endif; ?>	
+										<?php endwhile; ?>
                                 <?php endif; ?>
 					        </select>
 
@@ -60,7 +65,6 @@
 					$("#items-add").empty();
 				});
 				$("#add-submit").click(function(){
-					alert("Test");
 					$("#addPurchaseOrder").hide();
 					$("#items-add").empty();
 				});
@@ -80,13 +84,6 @@
 				$(".close").click(function () {
 					$("#viewPO").hide();
 				});
-
-
-			    $('#next').click(function(){
-				        var numberOrder = $('#numorder').val();
-				        $('#inputnum').val(numberOrder);
-					});
-
 			    // Update Status
 			    $(".update").click(function(){
 			    	var status = $(this).data("status");
