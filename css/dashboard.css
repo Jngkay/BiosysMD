@@ -1,5 +1,6 @@
 body{
 	background-color: #ededed;
+	overflow: hidden;
 }
 .container{
 	margin-left: 18%;
