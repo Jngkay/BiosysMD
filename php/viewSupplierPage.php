@@ -30,7 +30,7 @@
 								<td><?php echo $row["SupId"]; ?></td>
 								<td><?php echo $row["SupName"]; ?></td>	
 								<td><?php echo $row["SupAddress"]; ?></td>	
-								<td><a href="../actions/supplier_delete.php?sid=<?php echo $row["SupId"];?>" class="action delete">Delete</td>	
+								<td><a onclick="return alert('Supplier Deleted');" href="../actions/supplier_delete.php?sid=<?php echo $row["SupId"];?>" class="action delete">Delete</td>	
 							</tr>
 						<?php endwhile; ?>
 					<?php endif; ?>

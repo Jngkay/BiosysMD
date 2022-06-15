@@ -44,7 +44,7 @@
 										Update Status
 									</button>
 
-									<a href="../actions/purchaseorder_delete.php?cid=<?php echo $row["PurchaseorderNo"]; ?>">
+									<a onclick="return alert('Purchase Order Deleted');" href="../actions/purchaseorder_delete.php?cid=<?php echo $row["PurchaseorderNo"]; ?>">
 										<button class="action delete" href="">Delete</button>
 									</a>
 								</td>
