@@ -29,7 +29,7 @@
 								<td><?php echo $row["ClientId"]; ?></td>
 								<td><?php echo $row["ClientName"]; ?></td>	
 								<td><?php echo $row["ClientAddress"]; ?></td>
-								<td><a href="../actions/client_delete.php?cid=<?php echo $row["ClientId"];?>" class="action delete">Delete</td>	
+								<td><a onclick="return alert('Client Deleted');" href="../actions/client_delete.php?cid=<?php echo $row["ClientId"];?>" class="action delete">Delete</td>	
 							</tr>
 						<?php endwhile; ?>
 					<?php endif; ?>

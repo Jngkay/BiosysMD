@@ -1,7 +1,7 @@
 <div id="myModal" class="modal">
 	<!-- Modal content -->
 	<div class="modal-content">
-		<form action="../actions/supplier_add.php" method="POST">
+		<form onsubmit="return alert('Supplier successfully added.');" action="../actions/supplier_add.php" method="POST">
 			<div class="header">
 				<h3 id="Title">Create Supplier</h3>
 				<span class="close">&times;</span>

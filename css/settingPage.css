@@ -63,3 +63,19 @@ body{
 .username{
 	margin-bottom: 5%;
 }
+#username{
+	color: gray;
+	border-bottom: 1px solid green;
+	padding-left: 10px;
+	padding-right: 135px;
+	margin-bottom: 10px;
+}
+#change{
+	color: gray;
+	border-bottom: 1px solid green;
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+#changebtn{
+	margin: 10px 0px;
+}

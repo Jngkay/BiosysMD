@@ -39,7 +39,7 @@
 						<td><button class="action update" 
 						data-status="<?php echo $row["orderStatus"]; ?>"
 						data-clientorderno="<?php echo $row["ClientOrderNo"]; ?>">Update Status</button>
-						<a class="action delete" href="../actions/orderclient_delete.php?clientorderno=<?php echo $row["ClientOrderNo"];?>">Delete</a></td>
+						<a class="action delete" onclick="return alert('Client Order Deleted');" href="../actions/orderclient_delete.php?clientorderno=<?php echo $row["ClientOrderNo"];?>">Delete</a></td>
 					</tr>
 
 				<?php endwhile; ?>

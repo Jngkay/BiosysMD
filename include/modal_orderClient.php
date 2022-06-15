@@ -17,7 +17,7 @@
 
 <div id="addClientOrder" class="modal">
     <div class="modal-content">
-			<form action="../actions/orderclient_add.php" method="POST">
+			<form onsubmit="return alert('Client Order added.');" action="../actions/orderclient_add.php" method="POST">
 				<input type="hidden" name="numorder" id="inputnum">
 				<div class="header">
 					<h3 id="Title">Add Client Order</h3>
@@ -27,8 +27,8 @@
 					$sqll = "SELECT * FROM clients"; 
 					$resultt = $conn->query($sqll);	
 				?>
-					<div class="form-group">
-						<input type="text" class="form-control" name="clientId" placeholder="Client Id">
+					<div class="form-group clientorderno">
+						<input type="text" class="form-control" name="clientId" value="<?php echo date('dHis'); ?>" placeholder="Client Order No">
 					</div>
 					<select class="form-select" name="clientName">
 						<?php if ($resultt->num_rows > 0): ?>

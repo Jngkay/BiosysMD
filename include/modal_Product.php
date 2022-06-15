@@ -1,7 +1,7 @@
 <div id="myModal" class="modal">
 	<!-- Modal content -->
 		<div class="modal-content">
-			<form action="../actions/product_add.php" method="POST">
+			<form onsubmit="return alert('Product successfully added.');" action="../actions/product_add.php" method="POST">
 
 				<div class="header">
 					<h3 id="Title">Create Product</h3>
